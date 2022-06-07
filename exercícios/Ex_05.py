@@ -1,0 +1,1 @@
+#Faça um programa que leia um inteiro e mostre seu sucessor e seu antecessor

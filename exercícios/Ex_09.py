@@ -1,0 +1,1 @@
+#Crie um programa que leia um numero inteiro qualquer e imprima na tela sua tabuada (sem loop)
