@@ -1,5 +1,7 @@
+#Build a program to read any integer number and print his multiplication table (without use loop)
 #Crie um programa que leia um numero inteiro qualquer e imprima na tela sua tabuada (sem loop)
-num = int(input('Digite um numero:'))
+
+num = int(input('Insert an integer number:'))
 
 print('{}x1 = {}\n{}x2 = {}' .format(num, num, num, num*2))
 print('{}x3 = {}\n{}x4 = {}' .format(num, num*3, num, num*4))
