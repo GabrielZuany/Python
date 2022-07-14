@@ -1,2 +1,2 @@
 # Python
-Aprendendo Python
+Estudando Python
