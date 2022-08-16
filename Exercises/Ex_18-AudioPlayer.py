@@ -1,6 +1,7 @@
 #Make a script that plays a sound file.
 
 import pygame
+
 pygame.init()
 pygame.mixer.music.load('PATH TO AUDIO FILE')
 pygame.mixer.music.play()
