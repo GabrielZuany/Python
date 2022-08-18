@@ -1,5 +1,4 @@
 #develop a program that reads an open interval (n-m) and prints all the prime numbers in that interval.
-import math
 StartOfRange = int(input('Start of range: '))
 EndOfRange = int(input('End of range: '))
 flag = 0
