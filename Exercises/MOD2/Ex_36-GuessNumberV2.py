@@ -7,6 +7,10 @@ attempt = -1
 while UserNum != rand:
     UserNum = int(input('Try to guess the number (0-10): '))
     attempt+=1
+    if UserNum < rand:
+        print('Low value...', end = '')
+    elif UserNum > rand:
+        print('High value...', end = '')
     print('Attempts: {}' .format(attempt+1))
     
 print('\n')
