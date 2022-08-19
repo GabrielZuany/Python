@@ -15,5 +15,5 @@ while UserNum != rand:
     
 print('\n')
 print('-='*10)
-print('WINEER!\nNumber: {}\nAttempts: {}' .format(rand, attempt+1))
+print('WINNER!\nNumber: {}\nAttempts: {}' .format(rand, attempt+1))
 print('-='*10)

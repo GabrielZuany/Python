@@ -1,5 +1,4 @@
 #Create a program that reads several integers. At the end of the run, show the average of the entered values, the highest and the lowest. The program should ask whether or not the user wants to continue typing numbers.
-
 from cmath import inf
 
 Higher = 0
