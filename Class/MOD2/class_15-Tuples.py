@@ -1,13 +1,13 @@
-tuple = ('item 1', 'item 2', 'item 3')
-print(tuple)
+Tuple = ('item 1', 'item 2', 'item 3')
+print(Tuple)
 
-for item in tuple:
+for item in Tuple:
     print(f'{item}')
 
 print()
 
-for count in range(0, len(tuple)):
-    print(f'{tuple[count]}')
+for count in range(0, len(Tuple)):
+    print(f'{Tuple[count]}')
 
 print('~'*30)
 
