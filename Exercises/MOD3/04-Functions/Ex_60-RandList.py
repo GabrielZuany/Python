@@ -1,4 +1,4 @@
-#Make a script that have a list builded with random numbers (function: 'randomise()'). Then make a functiont to sum only the even values of list(function: 'sum()').
+#Make a script that have a list (random size between 1 and 10) builded with random numbers (function: 'randomise()'). Then make a functiont to sum only the even values of list(function: 'sum()').
 from random import randint
 
 def randomise():
