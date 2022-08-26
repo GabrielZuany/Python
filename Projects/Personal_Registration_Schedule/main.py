@@ -3,36 +3,29 @@
 #The output will be find at 'RecordedData/file.txt'
 
 REC = 80 #Number of records.
-from ast import arg
 import sys
 import os
-import builtins
 
 #===============FUNCTIONS================
-def SysConfig(status):
+def SysConfig():
     archive = 'RecordedData/file.txt'
-    if status == 1:#---------------------------if the archive is beeing written.
-        sys.stdout = open(archive, 'a')
-    elif os.path.exists(archive) == False:#-----if the output archive does not exists, create one.
+    if os.path.exists(archive) == False:#-----if the output archive does not exists, create one.
         sys.stdout = open(archive, 'x')
     else:
         sys.stdout = open(archive, 'w')
 
-def ReadData():        
-    sys.stdout = open('temp.txt', 'w')#Do not print de below inputs at archive.
-    data['name'] = str(input('Name: '))
-    data['city'] = str(input('City: '))
-    data['ZIP'] = int(input('ZIP code: '))
-    data['phone'] = int(input('Phone number: '))
-    os.remove('temp.txt')
-    SysConfig(1)#---------------------Reset the output to main archive.
+def ReadData():       
+    data['name'] = str(input(''))
+    data['city'] = str(input(''))
+    data['ZIP'] = str(input(''))
+    data['phone'] = str(input(''))
     return data
 
 def PrintSchedule():#-----------------Print the header of schedule.
     print('-'*120)
-    print(' '*40, 'PERSONAL REGISTRATION SCHEDULE')
+    print(' '*38, 'PERSONAL REGISTRATION SCHEDULE')
     print('-'*120)
-    print('INDEX','|', ' '*10, 'NAME',  ' '*10,'|', ' '*10, ' CITY ', ' '*10,'|', ' '*10, 'ZIP CODE',  ' '*10,'|', ' '*5, 'PHONE')
+    print('INDEX|', ' '*10, 'NAME',  ' '*10,'|', ' '*10, ' CITY ', ' '*10,'|', ' '*10, 'ZIP CODE',  ' '*10,'|', ' '*5, 'PHONE')
     print('-'*120)
 
 def PrintInfo(data):#-------------------Print the current data.
@@ -43,11 +36,10 @@ def PrintInfo(data):#-------------------Print the current data.
     
 #======================================
 
-#--------------MAIN------------------------
+#--------------MAIN---------------------
 data = dict()
 schedule = list()
-QuantityOfPeople = 5
-SysConfig(0)
+SysConfig()
     
 for index in range(0, REC):
     data = ReadData()
