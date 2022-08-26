@@ -9,7 +9,7 @@ import os
 #===============FUNCTIONS================
 def SysConfig():
     archive = 'RecordedData/file.txt'
-    if os.path.exists(archive) == False:#-----if the output archive does not exists, create one.
+    if os.path.exists(archive) == False:#if the output archive does not exists, create one.
         sys.stdout = open(archive, 'x')
     else:
         sys.stdout = open(archive, 'w')
@@ -21,14 +21,14 @@ def ReadData():
     data['phone'] = str(input(''))
     return data
 
-def PrintSchedule():#-----------------Print the header of schedule.
+def PrintSchedule():#Print the header of schedule.
     print('-'*120)
     print(' '*38, 'PERSONAL REGISTRATION SCHEDULE')
     print('-'*120)
     print('INDEX|', ' '*10, 'NAME',  ' '*10,'|', ' '*10, ' CITY ', ' '*10,'|', ' '*10, 'ZIP CODE',  ' '*10,'|', ' '*5, 'PHONE')
     print('-'*120)
 
-def PrintInfo(data):#-------------------Print the current data.
+def PrintInfo(data):#Print the current data.
     print(f"{data['name'] :^28}", end='|')
     print(f"{data['city'] :^30}", end='|')
     print(f"{data['ZIP'] :^32}", end='|')
@@ -36,7 +36,7 @@ def PrintInfo(data):#-------------------Print the current data.
     
 #======================================
 
-#--------------MAIN---------------------
+#-----------------MAIN---------------------
 data = dict()
 schedule = list()
 SysConfig()
