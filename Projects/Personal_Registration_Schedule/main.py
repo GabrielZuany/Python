@@ -3,10 +3,8 @@
 #The output will be find at 'RecordedData/file.txt'
 
 REC = 80 #Number of records.
-from ast import arg
 import sys
 import os
-import builtins
 
 #===============FUNCTIONS================
 def SysConfig(status):
