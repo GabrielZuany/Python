@@ -21,7 +21,7 @@ def option():
     """
     valid = False
     while not valid:
-        option = str(input('1)Download Video;\n2)Download Audio.\n3)Exit.\n-> '))
+        option = str(input('\n1)Download Video;\n2)Download Audio.\n3)Exit.\n-> '))
         if (option == '1' or option == '2' or option == '3') and option.isnumeric():
             return option
         else:
