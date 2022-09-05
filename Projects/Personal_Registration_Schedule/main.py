@@ -5,7 +5,6 @@
 REC = 80 #Number of records.
 import sys
 import os
-
 #===============FUNCTIONS================
 def SysConfig():
     archive = 'RecordedData/file.txt'
