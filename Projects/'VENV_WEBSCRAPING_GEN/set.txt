@@ -1,0 +1,13 @@
+------VIRTUAL ENV FOR WEBSCRAPING-------
+python -m venv <name> ->Creates a virtual envirement
+install packages
+scrapy startproject <Project name> ->Start a folder to develop the project
+cd <Project name> -> scrapy genspider <name> <url> to crate a spider file
+cd .. -> .\VIRTUAL ENV\Scripts\activate
+scrapy shell ->isolated test envirement
+develop
+quit()
+scrapy crawl <filename> -O name.extension -> execute the script and generates an archive.
+
+On scrapy shell:
+fetch('URL') -> try to stablish connection with server.
