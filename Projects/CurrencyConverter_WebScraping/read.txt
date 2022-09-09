@@ -1,0 +1,1 @@
+To build this project was used the spider generator and virtual environment (unzip 'CURRCONVERT').
