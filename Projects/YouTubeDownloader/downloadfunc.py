@@ -50,6 +50,6 @@ def fileDownload (video):
             if yt.title.isalpha():
                 param = f'{yt.title}.mp3'
             else:
-                param = 'FILE.mp3'# If the video contains simbol, the script will rename it generecly.
+                param = 'FILE.mp3'# If the video contains symbol, the script will rename it generally.
                 
             YouTube(f'{path}').streams.get_audio_only().download('../YT_DOWNLOADS', filename=f'{param}')
