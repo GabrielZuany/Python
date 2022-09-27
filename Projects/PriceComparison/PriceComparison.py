@@ -1,20 +1,26 @@
 import amazonpackage
-from time import sleep
-import requests
-import pandas as pd
-from bs4 import BeautifulSoup
-from selenium.webdriver.common.by import By
+import managerbrowser
 
-browser = amazonpackage.OpenGoogleWindow(Show=True)
+def AmazonScrap(browser):
+    managerbrowser.SubmitSearch(browser, 'amazon')
+    managerbrowser.ClickGoogleLink(browser)
+    amazonpackage.FindAmzProducts(browser)
+    amazonpackage.WriteAmzProducts(browser)
+    
+def MLScrap(browser):
+    return
+    
+def AmericanasScrap(browser):
+    return
 
-amazonpackage.SubmitSearch(browser)
-amazonpackage.ClickGoogleLink(browser)
-amazonpackage.FindAmzProducts(browser)
-sleep(1)
+browser = managerbrowser.OpenGoogleWindow(Show=True) 
+AmazonScrap(browser)
+managerbrowser.DefGoogleUrl(browser)
 
-amazonpackage.WriteAmzProducts(browser)
-browser.find_element(By.CLASS_NAME, 's-pagination-button').click()
-sleep(1)
+MLScrap(browser)
+managerbrowser.DefGoogleUrl(browser)
 
-amazonpackage.WriteAmzProducts(browser)
+AmericanasScrap(browser)
+managerbrowser.DefGoogleUrl(browser)
+
 browser.close()
