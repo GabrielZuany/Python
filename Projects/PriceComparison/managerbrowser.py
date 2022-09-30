@@ -1,16 +1,14 @@
 from webbrowser import Chrome
-import requests
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 from time import sleep
 
-def DefGoogleUrl(browser):
+def DefGoogleUrl(browser):#back to google...
      browser.get('https://www.google.com/')
-     sleep(0.5)
 
-def OpenGoogleWindow(Show=False):
+def OpenGoogleWindow(Show=False):#open the browser window.
     options = Options()
     if Show == False:
         options.add_argument('--headless')
@@ -19,12 +17,12 @@ def OpenGoogleWindow(Show=False):
     browser.get('https://www.google.com/')
     return browser
 
-def ClickGoogleLink(browser):
+def ClickGoogleLink(browser): #click in the first link showed after search.
     full_html = browser.find_element(By.ID, 'rso')#full result page
     page_first_link = full_html.find_element(By.TAG_NAME, 'h3').click()#first link
 
-def SubmitSearch(browser, keyword='google'):
-    sleep(0.5)
+def SubmitSearch(browser, keyword='google'):#insert a keyword in google text bar.
+    sleep(0.2)
     input_search_place = browser.find_element(By.TAG_NAME, 'input')
     input_search_place.send_keys(keyword)
     input_search_place.submit()

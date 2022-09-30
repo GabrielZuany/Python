@@ -1,5 +1,6 @@
-import amazonpackage
 import managerbrowser
+import amazonpackage
+import MLpackage
 
 def AmazonScrap(browser):
     managerbrowser.SubmitSearch(browser, 'amazon')
@@ -8,19 +9,36 @@ def AmazonScrap(browser):
     amazonpackage.WriteAmzProducts(browser)
     
 def MLScrap(browser):
+    managerbrowser.SubmitSearch(browser, 'mercado livre')
+    managerbrowser.ClickGoogleLink(browser)
+    MLpackage.FindMLProd(browser)
+    MLpackage.WriteMLProd(browser)
     return
     
-def AmericanasScrap(browser):
+'''def AmericanasScrap(browser):
     return
 
-browser = managerbrowser.OpenGoogleWindow(Show=True) 
-AmazonScrap(browser)
-managerbrowser.DefGoogleUrl(browser)
+def MagaluScrap(browser):
+    return
 
+def SubmarinoScrap(browser):
+    return'''
+
+browser = managerbrowser.OpenGoogleWindow(Show=True) 
 MLScrap(browser)
 managerbrowser.DefGoogleUrl(browser)
 
+AmazonScrap(browser)
+managerbrowser.DefGoogleUrl(browser)
+
+'''
 AmericanasScrap(browser)
 managerbrowser.DefGoogleUrl(browser)
+
+MagaluScrap(browser)
+managerbrowser.DefGoogleUrl(browser)
+
+SubmarinoScrap(browser)
+managerbrowser.DefGoogleUrl(browser)'''
 
 browser.close()

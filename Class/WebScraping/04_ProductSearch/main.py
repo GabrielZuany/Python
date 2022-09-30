@@ -13,7 +13,7 @@ site = BeautifulSoup(content, 'html.parser')
 box = site.findAll('li', attrs={'class':'ui-search-layout__item'})
 
 for product_box in box:
-    title = product_box.find('h2', attrs={'class':'ui-search-item__title ui-search-item__group__element shops-custom-secondary-font shops__item-title'})
+    title = product_box.find('div', attrs={'class':'ui-search-item__group ui-search-item__group--title shops__items-group'})
     symbol_tag = product_box.find('span', attrs={'class':'price-tag-symbol'})
     price = product_box.find('span', attrs={'class':'price-tag-fraction'})
     link_html = product_box.find('a', attrs={'class':'ui-search-result__content ui-search-link'})

@@ -1,4 +1,11 @@
 {
     "git.ignoreLimitWarning": true,
-    "diffEditor.wordWrap": "on"
+    "diffEditor.wordWrap": "on",
+    "cSpell.words": [
+        "amazonpackage",
+        "Americanas",
+        "Magalu",
+        "managerbrowser",
+        "Submarino"
+    ]
 }
