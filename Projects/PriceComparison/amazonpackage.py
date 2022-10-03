@@ -19,7 +19,6 @@ def WriteAmzProducts(browser): #write product details in a list.
     Amz_List = []
     main = 'https://www.amazon.com.br'
     response = requests.get(browser.current_url)
-    print(response)
     while not response.ok:#waits for <Response [200]>
         response = requests.get(browser.current_url)
         print(response)

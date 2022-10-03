@@ -22,7 +22,7 @@ def ClickGoogleLink(browser): #click in the first link showed after search.
     page_first_link = full_html.find_element(By.TAG_NAME, 'h3').click()#first link
 
 def SubmitSearch(browser, keyword='google'):#insert a keyword in google text bar.
-    sleep(0.2)
-    input_search_place = browser.find_element(By.TAG_NAME, 'input')
+    sleep(1)
+    input_search_place = browser.find_element(By.XPATH, '/html/body/div[1]/div[3]/form/div[1]/div[1]/div[1]/div/div[2]/input')
     input_search_place.send_keys(keyword)
     input_search_place.submit()

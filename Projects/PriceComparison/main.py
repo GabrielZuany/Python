@@ -14,15 +14,6 @@ def MLScrap(browser):
     MLpackage.FindMLProd(browser)
     MLpackage.WriteMLProd(browser)
     return
-    
-'''def AmericanasScrap(browser):
-    return
-
-def MagaluScrap(browser):
-    return
-
-def SubmarinoScrap(browser):
-    return'''
 
 browser = managerbrowser.OpenGoogleWindow(Show=True) 
 MLScrap(browser)
@@ -31,14 +22,5 @@ managerbrowser.DefGoogleUrl(browser)
 AmazonScrap(browser)
 managerbrowser.DefGoogleUrl(browser)
 
-'''
-AmericanasScrap(browser)
-managerbrowser.DefGoogleUrl(browser)
-
-MagaluScrap(browser)
-managerbrowser.DefGoogleUrl(browser)
-
-SubmarinoScrap(browser)
-managerbrowser.DefGoogleUrl(browser)'''
 
 browser.close()
