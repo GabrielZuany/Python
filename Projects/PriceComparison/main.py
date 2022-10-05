@@ -3,10 +3,12 @@ import amazonpackage
 import MLpackage
 
 def AmazonScrap(browser):
+    ProductList = []
     managerbrowser.SubmitSearch(browser, 'amazon')
     managerbrowser.ClickGoogleLink(browser)
-    amazonpackage.FindAmzProducts(browser)
-    amazonpackage.WriteAmzProducts(browser)
+    amazonpackage.SearchAmzProduct(browser)
+    ProductList = amazonpackage.GetAmzProducts(browser)
+    amazonpackage.TableToExcel(ProductList)
     
 def MLScrap(browser):
     managerbrowser.SubmitSearch(browser, 'mercado livre')
