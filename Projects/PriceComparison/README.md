@@ -16,7 +16,7 @@
   Using _**Selenium**_ to go through the pages of webstore (and webstores), and _**bs4**_ I can extract all data that I want to, the automating system is almost
   100% conclued.<br>
   With my product list finished, I convert it to .xlsx file and export to _**R script**_ to analyze the data.<br>
-  With **R**, I load the .xlsx file and read the price column. After store in a data frame I unlist and convert to numeric value. Then start to compare the data extracted
+  With **R**, I load the .xlsx file and read the price column. After store it in a data frame, I unlist and convert to numeric values. Then start to compare the data extracted
   by each webstore and build a plot to do statistical analysis.<br><br>
   At the end, I will have .xlsx files with all product informations (Name, price, link...) and statistical graph to interpret the data.
   
