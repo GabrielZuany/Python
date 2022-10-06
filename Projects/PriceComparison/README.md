@@ -21,8 +21,8 @@
   At the end, I will have .xlsx files with all product informations (Name, price, link...) and statistical graph to interpret the data.
   
 ## Additional Information:
-  -Author: Gabriel Zuany Duarte Vargas. (ES, Brazil)<br>
-  -Date: 06/10/2022 (_last update_)<br>
-  -**Please, feel free to suggest improvements and new features!**<br>
-  -You can contact me in _gabrielzuanyduartevargas@gmail.com_.<br>
-  ;)
+  - **THIS PROJECT ISN'T FINISHED!**<br>
+  - Author: Gabriel Zuany Duarte Vargas. (ES, Brazil)<br>
+  - Date: 06/10/2022 (_last update_)<br>
+  - **Please, feel free to suggest improvements and new features!**<br>
+  - You can contact me in _gabrielzuanyduartevargas@gmail.com_.<br>
