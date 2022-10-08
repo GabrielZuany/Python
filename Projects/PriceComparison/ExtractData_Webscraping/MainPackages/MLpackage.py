@@ -3,13 +3,13 @@ import pandas as pd
 from time import sleep
 from MainPackages.managerbrowser import GetMainHTML
 from os import getcwd
+import re
+from types import NoneType
 
-PRODUCT ='rtx'#Will be defined dynamically by user.
-
-def SearchMLProduct(browser): #insert product name in searchbar.
+def SearchMLProduct(browser, product): #insert product name in searchbar.
     sleep(0.3)
     input_search_label = browser.find_element(By.CLASS_NAME, 'nav-search-input')
-    input_search_label.send_keys(PRODUCT)
+    input_search_label.send_keys(product)
     input_search_label.submit()
     
 def AcceptCookies(browser):
@@ -30,20 +30,25 @@ def GetMLProducts(browser): #write product details in a list.
     AcceptCookies(browser)
     
     last_page = (browser.find_element(By.CLASS_NAME, 'andes-pagination__page-count'))
-    last_page = last_page.text
-    last_page_number = int(last_page[-2]+last_page[-1])
-
+    
+    if type(last_page) != NoneType:#1 page only error
+        last_page = last_page.text
+        last_page_number = int(last_page[-2]+last_page[-1])
+    else:
+        last_page_number = 1
+    
     for pages in range(0, last_page_number):
         site_html = GetMainHTML(browser)
         box = site_html.findAll('li', attrs={'class':'ui-search-layout__item'}) 
         
         for product_box in box: #Get info of all products in page.
             title = product_box.find('div', attrs={'class':'ui-search-item__group ui-search-item__group--title shops__items-group'})
-            symbol_tag = product_box.find('span', attrs={'class':'price-tag-symbol'})
-            price = product_box.find('span', attrs={'class':'price-tag-fraction'})
+            price = str(product_box.find('span', attrs={'class':'price-tag-fraction'}).text)
+            price = re.sub('[.]', '', price)#to avoid the . floating number error.
             link_html = product_box.find('a', attrs={'class':'ui-search-result__content ui-search-link'})
             click_link = link_html.attrs['href']
-            ML_list.append([title.text, price.text, click_link])
+            ML_list.append([title.text, price, click_link])
+            
         NextPage(browser)
         
     return ML_list 

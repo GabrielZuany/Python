@@ -1,15 +1,15 @@
+from types import NoneType
 from selenium.webdriver.common.by import By
 import pandas as pd
 from time import sleep
 from MainPackages.managerbrowser import GetMainHTML
 from os import getcwd
+import re
 
-PRODUCT ='rtx'#Will be defined dynamically by user.
-
-def SearchAmzProduct(browser): #insert product name in searchbar.
+def SearchAmzProduct(browser, product): #insert product name in searchbar.
     sleep(1)
     input_search_amz = browser.find_element(By.ID, 'twotabsearchtextbox')
-    input_search_amz.send_keys(PRODUCT)
+    input_search_amz.send_keys(product)
     input_search_amz.submit()
 
 
@@ -24,10 +24,14 @@ def NextPage(browser):
 def GetAmzProducts(browser): #write product details in a list.
     Amz_List = []
     main = 'https://www.amazon.com.br'
-    
     site_html = GetMainHTML(browser)
+    
     last_page = site_html.find('span', attrs={'class':'s-pagination-item s-pagination-disabled'})
-    last_page = int(last_page.text)#number of pages.
+    
+    if type(last_page) != NoneType:#1 page only error
+        last_page = int(last_page.text)#number of pages.
+    else:
+        last_page = 1
     
     for page in range(0, last_page):
         site_html = GetMainHTML(browser)
@@ -39,7 +43,9 @@ def GetAmzProducts(browser): #write product details in a list.
             prod_link = product.find('a', attrs={'class':'a-link-normal s-underline-text s-underline-link-text s-link-style a-text-normal'})
             click_link = main + prod_link.attrs['href']    
             if prod_name and prod_price and prod_link != None:
-                Amz_List.append([prod_name.text, prod_price.text[3:-3], click_link])
+                price = str(prod_price.text[3:-3])
+                price = re.sub('[.]', '', price)
+                Amz_List.append([prod_name.text, price, click_link])
                 
         NextPage(browser)
         sleep(1)
@@ -49,5 +55,5 @@ def GetAmzProducts(browser): #write product details in a list.
 
 def TableToExcel(Amz_list): #format the list to data frame and convert it to excel.
     path = getcwd()
-    df_prod = pd.DataFrame(Amz_list, columns=['Product Name', 'Product Price (R$)', 'Product Link'])
+    df_prod = pd.DataFrame(Amz_list, columns=['Product', 'Price (R$)', 'Link'])
     df_prod.to_excel(f"{path}/DataAnalysis/ExtractedData/AmzProd.xlsx", index=False)
