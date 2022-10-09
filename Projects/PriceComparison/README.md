@@ -17,7 +17,12 @@
   100% concluded.<br>
   When my product list is finished, I start to build plots (histograms) -_**Matplotlib**_- to analyse the collected data.<br>
   Then, I read the price column into dataframe (_**Pandas**_) and start to manipulate it to obtain important values like mean, median and (future) other info.<br><br>
-  At the end, I will have .xlsx files with all product information (Name, price, link...) and two statistical graph to interpret the data.
+  At the end, I will have .xlsx files with all product information (Name, price, link...) and two statistical graph to interpret the data.<br>
+  
+  
+  <br><br>
+  <img src="https://github.com/GabrielZuany/Python/blob/master/Projects/PriceComparison/DataAnalysis/JoinedPlots.png" width="500" height="400" />
+  <img src="https://github.com/GabrielZuany/Python/blob/master/Projects/PriceComparison/DataAnalysis/SeparatedPlots.png" width="500" height="400" />
   
 ## Last Updates:
   - Remove the R script and replace it to a builded python module (reason: make the full process 100% autonomous step by step. No need to execute another script).<br>
