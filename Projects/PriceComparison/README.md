@@ -1,4 +1,4 @@
-# Price Comparison using Web Scraping with Python
+# Price Comparator using Web Scraping with Python
 ## The reason behind the project:
  Automate the search, table and manipulate several information from different databases with specific structure.
  In this case, the database was a lot of commercial websites in witch each of them have their own builded HTML and CSS differently to the others.
