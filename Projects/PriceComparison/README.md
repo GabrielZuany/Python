@@ -11,11 +11,11 @@
   2. **BeautifulSoup** to get html page, after establish a stable connection (Response ~200).
   3. **Pandas** and **Matplotlib** to analyze and build plot with the collected data.
   
-  When the connections is stable, the script pulls the HTML page content. Once I have the HTML, I can look for elements that I'm interested to collect about the
-  current page and store it in a _list_.<br>
-  Using _**Selenium**_ to go through the websites pages, and _**bs4**_ I can extract all data that I want to, the automating system is almost
+  When the connection is stable, the script pulls the HTML page content. Once I have the HTML, I can look for elements that I'm interested to collect about the
+  current page and store it into a _list_.<br>
+  Using _**Selenium**_ to go through the websites pages, and _**bs4**_ to extract all data that I want to, the automating system is almost
   100% concluded.<br>
-  With my product list finished, I start to build plots (histograms) -_**Matplotlib**_- to analyses the collected data.<br>
+  When my product list is finished, I start to build plots (histograms) -_**Matplotlib**_- to analyse the collected data.<br>
   Then, I read the price column into dataframe (_**Pandas**_) and start to manipulate it to obtain important values like mean, median and (future) other info.<br><br>
   At the end, I will have .xlsx files with all product information (Name, price, link...) and two statistical graph to interpret the data.
   
