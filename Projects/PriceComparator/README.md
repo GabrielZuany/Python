@@ -19,10 +19,17 @@
   Then, I read the price column into dataframe (_**Pandas**_) and start to manipulate it to obtain important values like mean, median and (future) other info.<br><br>
   At the end, I will have .xlsx files with all product information (Name, price, link...) and two statistical graph to interpret the data.<br>
   
-  
+## Histograms:
   <br><br>
-  <img src="https://github.com/GabrielZuany/Python/blob/master/Projects/PriceComparator/DataAnalysis/JoinedPlots.png" width="500" height="400" />
-  <img src="https://github.com/GabrielZuany/Python/blob/master/Projects/PriceComparator/DataAnalysis/SeparatedPlots.png" width="500" height="400" />
+  <img src="https://github.com/GabrielZuany/Python/blob/master/Projects/PriceComparator/ExtractedData/JoinedPlots.png" width="500" height="400" />
+  <img src="https://github.com/GabrielZuany/Python/blob/master/Projects/PriceComparator/ExtractedData/SeparatedPlots.png" width="500" height="400" />
+  <br><br>
+  
+## XLSX files:
+<br><br>
+  <img src="https://github.com/GabrielZuany/Python/blob/master/Projects/PriceComparator/img/AmzScreenShot.png" width="500" height="400" />
+  <img src="https://github.com/GabrielZuany/Python/blob/master/Projects/PriceComparator/img/ML_ScreenShot.png" width="500" height="400" />
+  <br><br>
   
 ## Last Updates:
   - Remove the R script and replace it to a builded python module (reason: make the full process 100% autonomous step by step. No need to execute another script).<br>
@@ -34,6 +41,6 @@
 
 ## Additional Information:
   - Author: Gabriel Zuany Duarte Vargas. (ES, Brazil)<br>
-  - Date: 08/10/2022 (_last update_)<br>
+  - Date: 09/10/2022 (_last update_)<br>
   - **Please, feel free to suggest improvements and new features!**<br>
   - You can contact me in _gabrielzuanyduartevargas@gmail.com_.<br>
