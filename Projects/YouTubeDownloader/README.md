@@ -1,5 +1,5 @@
 # YouTube Downloader with Python
-- Requirements: pytube pagkage.
+- Requirements: pytube package.
 > pip install pytube
 
 <br>
