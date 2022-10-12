@@ -25,7 +25,7 @@ scrapy runspider -O OutputFileName.extension ./PATH/spiders/PythonMainFileName.p
 <br>
 
 - Check the script running:<br>
- [Video](https://github.com/GabrielZuany/Python/blob/master/Projects/MovieRating_WebScraping/media/imdb.py%20-%20MovieRating_WebScraping%20-%20Visual%20Studio%20Code%202022-10-11%2019-39-40.mp4)
+ [Video](https://github.com/GabrielZuany/Python/blob/master/Projects/CurrencyConverter_WebScraping/media/CurrencyConverter_WebScraping%20-%20Visual%20Studio%20Code%202022-10-11%2020-54-18.mp4)
 
 ---
 
