@@ -15,7 +15,7 @@ python ./main.py
 ~~~~
 ---
 
-2. Then and select one of these options:<br><br>
+2. Then select one of these options:<br><br>
 <img src =  "https://github.com/GabrielZuany/Python/blob/master/Projects/YouTubeDownloader/media/op.png" /><br>
 ---
 
@@ -29,7 +29,7 @@ python ./main.py
 <img src = "https://github.com/GabrielZuany/Python/blob/master/Projects/YouTubeDownloader/media/download.png" /><br>
 
 ## **Rules**!
-- This project is for academic purposes only and should not be commercialized or used deliberately.
+- This project is for academic purposes only and can not be commercialized or used deliberately.
 The user who does this will be subject to legal sanctions and may respond to justice for piracy.
 
 
