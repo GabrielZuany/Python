@@ -24,5 +24,3 @@ ranking_df = md.GeraRankingLojas(relatorio_df)
 relatorio_df.to_excel(PATH_OUT + RELATORIO_FILENAME, index=True)
 ranking_df.to_excel(PATH_OUT + RANKING_FILENAME, index=True)
 
-gr = sns.lmplot(data=relatorio_df, x=PRECO_PRODUTO, y=QTD_VENDA_PRODUTOS_FUNCIONARIO)
-plt.show()

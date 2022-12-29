@@ -1,0 +1,10 @@
+{
+    1. 'Solarize_Light2' ok
+    2. '_classic_test_patch' ok
+    7. 'fast' ok
+    8. 'fivethirtyeight' ok
+    9. 'ggplot' fortissimo
+    11. 'seaborn-v0_8' forte
+    13. 'seaborn-v0_8-dark' ok
+    15. 'seaborn-v0_8-darkgrid' ok
+}
