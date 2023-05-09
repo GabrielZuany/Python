@@ -1,9 +1,16 @@
-Executar (em STREAMLIT_LOGIN/):
+Endereço: https://gabrielzuany-streamlit-login-srcapp-toilfb.streamlit.app/
+
+ou 
+
+Executar Local (em STREAMLIT_LOGIN/):
     - Ativar venv: 
         $ venv/Scripts/Activate.ps1
 
     - Run:
-        $ streamlit run src/Login.py
+        $ streamlit run src/App.py
+
+    - Desativar venv:
+        $ deactivate
 
 
 Modelagem:
@@ -11,17 +18,12 @@ Modelagem:
     - .streamlit/secrets.toml: arquivo de configuaração de credenciais de acesso (não usado).
     - src/Classes/User.py: arquivo de classe criada para manipular os dados com os métodos e acessos necessários.
     - src/Database/database.db: banco de dados em sqlite para inserir, consultar e/ou deletar usuários.
-    - src/Packages: módulos criados para gerenciar funções genéricas (apenas 1 utilizado).
-    - src/pages/*.py: páginas criadas para separar a tela de login, cadastro e admin (não impus restrição para tornar mais fácil a visualização da ideia).
-    - src/Login.py: arquivo main.
+    - src/Packages: módulos criados para gerenciar funções genéricas.
+    - src/page/*.py: páginas criadas para separar a tela de login, cadastro e admin.
+    - src/App.py: arquivo main.
     - venv: ambiente de desenvolvimento virtual para isolar as dependências do projeto (boa prática de organização de projeto).
-
-Obs:
-    - Funcionalidade do campo de deletar usuário pode apresentar erro. :)
-
-
 
 
 - Gabriel Zuany
 - CComp, UFES
-- 04/04/2023
+- 07/04/2023
